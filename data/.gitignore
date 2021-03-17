@@ -1,1 +1,5 @@
 /raw_data.csv
+/raw_data.feather
+/train_df.feather
+/test_df.feather
+/valid_df.feather
