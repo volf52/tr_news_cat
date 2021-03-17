@@ -1,0 +1,5 @@
+outs:
+- md5: c296cb4463d0086d519590699ad8f7e5
+  size: 10627541
+  path: raw_data.csv
+  isexec: true
