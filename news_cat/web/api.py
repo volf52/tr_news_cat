@@ -1,5 +1,3 @@
-# TODO: Name PR as "Feature (Web) - Add API skeleton with random predictor as proxy"
-
 from fastapi import APIRouter, Form, Response
 from starlette.status import HTTP_400_BAD_REQUEST, HTTP_500_INTERNAL_SERVER_ERROR
 
