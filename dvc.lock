@@ -1,0 +1,35 @@
+schema: '2.0'
+stages:
+  clean_and_split:
+    cmd: python news_cat/ml/clean_data.py
+    deps:
+    - path: data/raw_data.csv
+      md5: c296cb4463d0086d519590699ad8f7e5
+      size: 10627541
+    - path: news_cat/ml/clean_data.py
+      md5: 59964f645a8169ecc7627b12550ef62a
+      size: 2436
+    - path: news_cat/ml/config.py
+      md5: 7c0d79efaf8d46244f5c667c609aed20
+      size: 240
+    outs:
+    - path: artifacts/lbl_encoder.jlib
+      md5: fda61ddb91221cde5673b616000565c4
+      size: 82
+      isexec: true
+    - path: data/raw_data.feather
+      md5: 81b5b73909d5198f0d499801767b8f97
+      size: 5679554
+      isexec: true
+    - path: data/test_df.feather
+      md5: 5a1d47f47ff31a977dc72e9e046fd1b0
+      size: 594746
+      isexec: true
+    - path: data/train_df.feather
+      md5: d1c6390fe1bd741d5d1177e1c51bc73a
+      size: 4708618
+      isexec: true
+    - path: data/valid_df.feather
+      md5: 17ffb80c6ba8c410fdd8f973fca5ef72
+      size: 589690
+      isexec: true
