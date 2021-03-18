@@ -10,3 +10,18 @@ stages:
     - data/test_df.feather
     - data/train_df.feather
     - data/valid_df.feather
+  embed_tfidf:
+    cmd: python scripts/train_tfidf.py
+    deps:
+    - data/test_df.feather
+    - data/train_df.feather
+    - data/valid_df.feather
+    - scripts/train_tfidf.py
+    outs:
+    - artifacts/tfidf.jlib
+    - data/test_lbl.npy
+    - data/test_tfidf.npy
+    - data/train_lbl.npy
+    - data/train_tfidf.npy
+    - data/valid_lbl.npy
+    - data/valid_tfidf.npy

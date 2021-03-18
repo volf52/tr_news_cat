@@ -33,3 +33,47 @@ stages:
       md5: 17ffb80c6ba8c410fdd8f973fca5ef72
       size: 589690
       isexec: true
+  embed_tfidf:
+    cmd: python scripts/train_tfidf.py
+    deps:
+    - path: data/test_df.feather
+      md5: 5a1d47f47ff31a977dc72e9e046fd1b0
+      size: 594746
+    - path: data/train_df.feather
+      md5: d1c6390fe1bd741d5d1177e1c51bc73a
+      size: 4708618
+    - path: data/valid_df.feather
+      md5: 17ffb80c6ba8c410fdd8f973fca5ef72
+      size: 589690
+    - path: scripts/train_tfidf.py
+      md5: 9caafc60605f0d39f659c8b89f557bd9
+      size: 1601
+    outs:
+    - path: artifacts/tfidf.jlib
+      md5: 6612090c311a37855cab92eec1989c83
+      size: 2368467
+      isexec: true
+    - path: data/test_lbl.npy
+      md5: 1f362bb15cde7dc061db7bb8f572a7b7
+      size: 618
+      isexec: true
+    - path: data/test_tfidf.npy
+      md5: d992bf235288f70a781a45ebaa438ec5
+      size: 837507
+      isexec: true
+    - path: data/train_lbl.npy
+      md5: 6ad293beb6c6d5a06f695da8f062848d
+      size: 4048
+      isexec: true
+    - path: data/train_tfidf.npy
+      md5: af2393c0636b2066574ecbb68fb90961
+      size: 6907027
+      isexec: true
+    - path: data/valid_lbl.npy
+      md5: d774b644ea67f2d5983b188d3baae29d
+      size: 618
+      isexec: true
+    - path: data/valid_tfidf.npy
+      md5: 22ba614d08858480fcb1344db4dddbf0
+      size: 836475
+      isexec: true
