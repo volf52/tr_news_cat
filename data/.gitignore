@@ -1,11 +1,1 @@
 /raw_data.csv
-/raw_data.feather
-/train_df.feather
-/test_df.feather
-/valid_df.feather
-/train_tfidf.npy
-/train_lbl.npy
-/test_tfidf.npy
-/test_lbl.npy
-/valid_tfidf.npy
-/valid_lbl.npy
