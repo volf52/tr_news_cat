@@ -1,0 +1,25 @@
+schema: '2.0'
+stages:
+  clf_tfidf_logistic:
+    cmd: python scripts/train_tfidf_logistic.py
+    deps:
+    - path: data/test_lbl.npy
+      md5: 1f362bb15cde7dc061db7bb8f572a7b7
+      size: 618
+    - path: data/test_tfidf.npz
+      md5: 01be19652b637555512711f70a1a6ad0
+      size: 569961
+    - path: data/train_lbl.npy
+      md5: 6ad293beb6c6d5a06f695da8f062848d
+      size: 4048
+    - path: data/train_tfidf.npz
+      md5: 4866f41f418ed6fe6fecd63f07d85d21
+      size: 4751484
+    outs:
+    - path: artifacts/model_logistic.jlib
+      md5: 41498ad00dfa75b67cc0e491c067b62a
+      size: 3769265
+      isexec: true
+    - path: metrics/metrics_logistic.json
+      md5: 42a6ed126da102020112c31517e87658
+      size: 123

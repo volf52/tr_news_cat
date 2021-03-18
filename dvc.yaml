@@ -1,0 +1,13 @@
+stages:
+  clf_tfidf_logistic:
+    cmd: python scripts/train_tfidf_logistic.py
+    deps:
+    - data/test_lbl.npy
+    - data/test_tfidf.npz
+    - data/train_lbl.npy
+    - data/train_tfidf.npz
+    outs:
+    - artifacts/model_logistic.jlib
+    metrics:
+    - metrics/metrics_logistic.json:
+        cache: false
