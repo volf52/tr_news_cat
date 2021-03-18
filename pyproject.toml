@@ -6,6 +6,18 @@ authors = ["Arslan <rslnkrmt2552@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pandas = "^1.2.3"
+numpy = "^1.20.1"
+pyarrow = "^3.0.0"
+scikit-learn = "^0.24.1"
+torch = "^1.8.0"
+torchtext = "^0.9.0"
+spacy = "^3.0.5"
+fastapi = "^0.63.0"
+joblib = "^1.0.1"
+uvicorn = "^0.13.4"
+gunicorn = "^20.0.4"
+python-multipart = "^0.0.5"
 
 [tool.poetry.dev-dependencies]
 
