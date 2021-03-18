@@ -1,5 +1,0 @@
-outs:
-- md5: 22ba614d08858480fcb1344db4dddbf0
-  size: 836475
-  path: valid_tfidf.npy
-  isexec: true

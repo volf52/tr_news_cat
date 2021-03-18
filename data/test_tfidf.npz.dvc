@@ -1,0 +1,5 @@
+outs:
+- md5: 01be19652b637555512711f70a1a6ad0
+  size: 569961
+  path: test_tfidf.npz
+  isexec: true
