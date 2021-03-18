@@ -5,9 +5,9 @@ from dataclasses import dataclass
 class Embedding:
     tfidf_vectorizer = "tfidf.jlib"
 
-    train_tfidf = "train_tfidf.npy"
-    test_tfidf = "test_tfidf.npy"
-    valid_tfidf = "valid_tfidf.npy"
+    train_tfidf = "train_tfidf.npz"
+    test_tfidf = "test_tfidf.npz"
+    valid_tfidf = "valid_tfidf.npz"
 
     trainY = "train_lbl.npy"
     testY = "test_lbl.npy"

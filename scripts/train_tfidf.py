@@ -1,6 +1,7 @@
 import joblib
 import numpy as np
 import pandas as pd
+from scipy.sparse import save_npz
 
 from news_cat.config import get_app_settings
 from news_cat.ml.config import MLConfig
@@ -31,9 +32,9 @@ def vectorize():
     artifact_dir = get_app_settings().artifact_dir
     joblib.dump(vectorizer, artifact_dir.joinpath(MLConfig.embedding.tfidf_vectorizer))
 
-    np.save(base.joinpath(MLConfig.embedding.train_tfidf), trainX)
-    np.save(base.joinpath(MLConfig.embedding.test_tfidf), testX)
-    np.save(base.joinpath(MLConfig.embedding.valid_tfidf), validX)
+    save_npz(base.joinpath(MLConfig.embedding.train_tfidf), trainX)
+    save_npz(base.joinpath(MLConfig.embedding.test_tfidf), testX)
+    save_npz(base.joinpath(MLConfig.embedding.valid_tfidf), validX)
 
     np.save(base.joinpath(MLConfig.embedding.trainY), train_df[lbl_col].values)
     np.save(base.joinpath(MLConfig.embedding.testY), test_df[lbl_col].values)

@@ -20,8 +20,8 @@ stages:
     outs:
     - artifacts/tfidf.jlib
     - data/test_lbl.npy
-    - data/test_tfidf.npy
+    - data/test_tfidf.npz
     - data/train_lbl.npy
-    - data/train_tfidf.npy
+    - data/train_tfidf.npz
     - data/valid_lbl.npy
-    - data/valid_tfidf.npy
+    - data/valid_tfidf.npz
