@@ -4,7 +4,6 @@ stages:
     deps:
     - data/raw_data.csv
     - news_cat/ml/clean_data.py
-    - news_cat/ml/config.py
     outs:
     - artifacts/lbl_encoder.jlib
     - data/raw_data.feather
