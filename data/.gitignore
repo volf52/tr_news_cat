@@ -1,1 +1,7 @@
 /raw_data.csv
+/train_lbl.npy
+/train_tfidf.npy
+/test_tfidf.npy
+/test_lbl.npy
+/valid_lbl.npy
+/valid_tfidf.npy

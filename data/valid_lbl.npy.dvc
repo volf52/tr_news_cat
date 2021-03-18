@@ -1,0 +1,5 @@
+outs:
+- md5: d774b644ea67f2d5983b188d3baae29d
+  size: 618
+  path: valid_lbl.npy
+  isexec: true

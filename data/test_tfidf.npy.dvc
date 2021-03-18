@@ -1,0 +1,5 @@
+outs:
+- md5: d992bf235288f70a781a45ebaa438ec5
+  size: 837507
+  path: test_tfidf.npy
+  isexec: true

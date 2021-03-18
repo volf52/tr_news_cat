@@ -1,0 +1,5 @@
+outs:
+- md5: 6ad293beb6c6d5a06f695da8f062848d
+  size: 4048
+  path: train_lbl.npy
+  isexec: true
