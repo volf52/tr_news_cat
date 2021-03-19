@@ -1,0 +1,7 @@
+.git
+.dvc
+data
+scripts
+params.yaml
+README.md
+test.py
