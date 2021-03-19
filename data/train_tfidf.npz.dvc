@@ -1,5 +1,0 @@
-outs:
-- md5: 4866f41f418ed6fe6fecd63f07d85d21
-  size: 4751484
-  path: train_tfidf.npz
-  isexec: true
