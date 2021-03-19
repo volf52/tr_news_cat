@@ -8,7 +8,8 @@ from news_cat.web.schemas import MLModel
 
 class WebConfig(BaseConfig):
     available_models: List[MLModel] = [
-        MLModel(type="random", filename="", name="random")
+        MLModel(type="random", filename="", name="random"),
+        MLModel(type="scikit", filename="model_logistic.jlib", name="tfidf_25k_logistic")
     ]
 
 

@@ -35,7 +35,7 @@ async def predict(
         response.msg = f"`{key}` model is not available"
         return response
 
-    all_puncts, news_toks = clean_and_tokenize(news_txt)
+    all_puncts, news_toks = clean_and_tokenize(news_txt.strip())
 
     if len(news_toks) == 0:
         resp.status_code = HTTP_400_BAD_REQUEST
