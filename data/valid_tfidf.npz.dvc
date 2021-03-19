@@ -1,5 +1,0 @@
-outs:
-- md5: 119406eb1fff9024b83eb2555c12f044
-  size: 571186
-  path: valid_tfidf.npz
-  isexec: true

@@ -1,0 +1,5 @@
+outs:
+- md5: 41498ad00dfa75b67cc0e491c067b62a
+  size: 3769265
+  path: model_logistic.jlib
+  isexec: true
