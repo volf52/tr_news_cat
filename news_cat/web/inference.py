@@ -6,7 +6,6 @@ from typing import Dict, List, Tuple
 import joblib
 import numpy as np
 import spacy
-import torch
 from sklearn.pipeline import Pipeline
 
 from news_cat.config import get_app_settings
@@ -55,8 +54,6 @@ class ModelLoader:
             pth = base_pth.joinpath(av_mdl.filename)
             if av_mdl.type == 'scikit':
                 model = SkClassifier(joblib.load(pth))
-            elif av_mdl.type == 'torch':
-                model = torch.load(pth)
             elif av_mdl.type == 'random':
                 model = lambda x: random.randint(0, len(self.classes) - 1)
             else:
