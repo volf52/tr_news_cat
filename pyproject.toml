@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "news_cat"
-version = "0.2.0"
+version = "0.3.0"
 description = "Turkish Text Categorization - Example for ML projects"
 authors = ["Arslan <rslnkrmt2552@gmail.com>"]
 
