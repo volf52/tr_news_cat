@@ -28,22 +28,33 @@ RUN apt-get update && apt-get install --no-install-recommends -y wget curl bash 
     && groupadd -r web && useradd -d /app -r -g web web \
     && chown web:web -R /app
 
+# ---- Stage 2: Install Requirements --------------------------------------------
+
+FROM base as reqinstall
+
 COPY --chown=web:web ./poetry.lock ./pyproject.toml /app/
 
 RUN poetry install --no-ansi --no-interaction && rm -rf "$POETRY_CACHE_DIR"
 
-# -------------------------------------------------------------------------------
-# Multi-stage build to not have to re-install the requirements multiple times
-FROM base
-COPY --chown=web app.py dirs.tar /app/
+# ---- Stage 3: Install Application and get models ------------------------------
 
-# To install news_cat
-RUN tar -xf dirs.tar && rm dirs.tar \
-  && poetry install --no-ansi --no-interaction && rm -rf "$POETRY_CACHE_DIR"
+FROM reqinstall
 
 ENV PORT=8080
+ENV NWORKERS=2
+ENV NTHREADS=8
+ENV WORKER=uvicorn.workers.UvicornWorker
+
+COPY --chown=web . /app/
+
+# To install news_cat
+RUN poetry install --no-ansi --no-interaction && rm -rf "$POETRY_CACHE_DIR" \
+  && dvc pull && ls artifacts \
+  && rm -rf .dvc && rm -rf .git
+
 EXPOSE $PORT
 USER web
 
 ENTRYPOINT ["tini", "-g", "--"]
-CMD python -m uvicorn --host 0.0.0.0 --port ${PORT} app:app
+
+CMD gunicorn -b :${PORT} --threads ${NTHREADS} -w ${NWORKERS} -k ${WORKER} app:app

@@ -1,7 +1,14 @@
-.git
+.gitignore
 .dvc
+!.dvc/config
 data
+metrics
+artifacts/*
+!artifacts/*.dvc
 scripts
 params.yaml
 README.md
 test.py
+Dockerfile*
+docker-compose*
+docker-build.sh
